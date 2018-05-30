@@ -2,7 +2,7 @@
 
 Mrpyconsole is a tool to execute python scripts written to perform MapReduce operations on a Hadoop Cluster without having to upload files and call yarn manually. Basically, it is a python pipe for [Hadoop Streaming](http://hadoop.apache.org/docs/r1.2.1/streaming.html)
 
-
+![](MRconsole.png)
 
 ## Prerequisite
 
