@@ -1,5 +1,6 @@
 # MRpyconsole
 
+Mrpyconsole is a tool to execute python scripts written to perform MapReduce operations on a Hadoop Cluster without having to upload files and call yarn manually. Basically, it is a python pipe for [Hadoop Streaming](http://hadoop.apache.org/docs/r1.2.1/streaming.html)
 
 
 
@@ -37,7 +38,7 @@ cd MapreducePyConsole
 sudo python3 setup.py install
 ```
 
-this will create a build, a dist and a mrpyconsole.egg-info directory in the MapreducePyConsole folder
+This will create a *build*, a *dist* and a *mrpyconsole.egg-info* directory in the MapreducePyConsole folder.
 
 ## Usage
 
@@ -50,10 +51,14 @@ mrpyconsole [host] [user] [mapper] [reducer]
  ---- [mapper]: path to your python mapper (e.g. /somewhere/over/the/rainbow/mapper.py)
  ---- [reducer]: path to your python reducer (e.g. /somewhere/over/the/rainbow/reducer.py)
 ```
+You'll then be asked to provide:
+* the user's password
+* an input from your HDFS filesystem
+* a folder to write the results (that you can keed on the cloud or erase later on)
 
 ## Output
 
-If successful, the script will import the relevant files in your current directory ('mapper.py', 'part-00000', 'reducer.py', 'SUCCESS'). The results of the Map Reduce operations are located in part-00000
+If successful, the script will import the relevant files in your current directory ('mapper.py', 'part-00000', 'reducer.py', 'SUCCESS'). The results of the Map Reduce operations are located in part-00000.
 
 
 ## Uninstall
