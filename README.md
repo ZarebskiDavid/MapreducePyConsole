@@ -16,7 +16,7 @@ pip3 install fabric2
 You'll also need a working hadoop environnement. This includes:
 
 * a running **hdfs** file system (accessible through ``` hdfs dfs -command / ```)
-* a running **yarn ** (job scheduler aka. ResourceManager)
+* a running **yarn** (job scheduler aka. ResourceManager)
 * a ssh access to the **master-node** (i.e. the one managing the [name node](https://wiki.apache.org/hadoop/NameNode). Logged on the server, you can check this by running ``` jps ``` in your terminal.)
 * a **user** with enough priviledges to i) access the server with ssh ii) run hdfs iii) and yarn
 
@@ -30,15 +30,18 @@ hadoop@master-node:~$ jps
 
 ## Install
 
-clone this repo
 
-cd repo
-
+```
+git clone https://github.com/ZarebskiDavid/MapreducePyConsole.git
+cd MapreducePyConsole
 sudo python3 setup.py install
+```
 
-this will create a build , dist and mrpyconsole.egg-info directories in the MapreducePyConsole folder
+this will create a build, a dist and a mrpyconsole.egg-info directory in the MapreducePyConsole folder
 
 ## Usage
+
+You can call mrpyconsole directly from your terminal
 
 ```python
 mrpyconsole [host] [user] [mapper] [reducer]
@@ -57,5 +60,3 @@ If successful, the script will import the relevant files in your current directo
 ```
 sudo rm -R MapreducePyConsole
 ```
-# MapreducePyConsole
-# MapreducePyConsole
