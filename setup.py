@@ -15,7 +15,7 @@ setup(
     author_email="zarebskidavid@gmail.com",
     url="http://zarebski.io/",
     py_modules=['mrpyconsole'],
-    license=readfile('LICENSE'),
+    license=readfile('LICENCE'),
     entry_points={
         'console_scripts': [
             'mrpyconsole = mrpyconsole:mrpyconsole'
