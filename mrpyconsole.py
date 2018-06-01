@@ -51,7 +51,10 @@ def RunMapReduce(m, r, jar_path, yarn_path, hdfs_path, u):
 	input_path = input("Please choose the input of your program (on your HDFS File System) ")
 	output_path = input("Please choose a name for your output folder (e.g. /nameOfMyFolder) ")
 
-	main_command = str(yarn_path+ ' jar '+ jar_path+' -files mapper.py,reducer.py -mapper temp_streaming/mapper.py -reducer temp_streaming/reducer.py -input '+ input_path + ' -output '+ output_path)
+	#main_command = str(yarn_path+ ' jar '+ jar_path+' -files /home/'+u+'/temp_streaming/mapper.py,/home/'+u+'/temp_streaming/reducer.py -mapper /home/'+u+'/temp_streaming/mapper.py -reducer /home/'+u+'/temp_streaming/reducer.py -input '+ input_path + ' -output '+ output_path)
+
+	main_command = str(yarn_path+ ' jar '+ jar_path+' -files /home/'+u+'/temp_streaming/mapper.py,/home/'+u+'/temp_streaming/reducer.py -mapper mapper.py -reducer reducer.py -input '+ input_path + ' -output '+ output_path)
+
 	
 	try:	
 		connect.run(main_command , echo=True)
